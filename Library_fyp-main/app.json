@@ -1,0 +1,64 @@
+{
+  "expo": {
+    "name": "Library",
+    "slug": "library",
+    "version": "0.0.1",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "cover"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "buildNumber": "1.1.9",
+      "usesAppleSignIn": true,
+      "infoPlist": {
+        "NSPhotoLibraryUsageDescription": "Allow Library to access your photos to update your property images.",
+        "NSPhotoLibraryAddUsageDescription": "Allow Library to save photos of your property.",
+        "NSCameraUsageDescription": "Allow Library to use your camera to update your profile picture."
+      },
+      "bundleIdentifier": "com.app.library"
+    },
+    "android": {
+      "versionCode": 4,
+      "package": "com.app.library",
+      "useNextNotificationsApi": true,
+      "permissions": [
+        "CAMERA",
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE",
+        "android.permission.RECORD_AUDIO",
+        "RECEIVE_BOOT_COMPLETED"
+      ]
+    },
+    "notification": {
+      "iosDisplayInForeground": true
+    },
+    "plugins": [
+      [
+        "expo-media-library"
+      ],
+      [
+        "expo-apple-authentication"
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "The app accesses your photos to let you share them with your friends."
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "aa655763-76e3-44c0-adf1-7a8e5ce523dd"
+      }
+    }
+  }
+}
